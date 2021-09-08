@@ -1,4 +1,4 @@
-package com.company;
+package com.vueJSBrowser;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 
-public class Main {
+public class TestVueJSBrowser {
 
     public static void main(String[] args) {
 
@@ -17,7 +17,7 @@ public class Main {
         String chromeDriverPath="D://LETHA//KATALON//chromedriver_win32//chromedriver.exe";
         String URL="https://todomvc.com/examples/vue/";
         String todoItem1="Read";
-        String todoItem2="Shopping";
+        String todoItem2="Travel";
         String todoItemCount="2 items left";
 
         // TODO Auto-generated method stub
@@ -35,7 +35,7 @@ public class Main {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         WebElement element=driver.findElement(By.xpath("/html[1]/body[@class='learn-bar']/section[@class='todoapp']/header[@class='header']/input[@class='new-todo']"));
         boolean blElementPresent=element.isDisplayed();
-        if(blElementPresent == true)
+        if (blElementPresent)
         {
             System.out.println("Pass - what needs to be done element is present");
         }
